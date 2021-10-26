@@ -1,4 +1,7 @@
-FROM python:3.9-alpine
+FROM python:3.9-slim-buster
+
+RUN apt-get update && \
+    apt-get -y install gcc default-libmysqlclient-dev
 
 WORKDIR /app
 
